@@ -1,5 +1,5 @@
 document.querySelector("button").addEventListener("click", function (e) {
-  e.preventDefault(); // Sayfa yenilenmesini engelle
+  e.preventDefault(); 
 
   const email = document.querySelector("#email").value;
   const password = document.querySelector("#password").value;
@@ -15,9 +15,9 @@ document.querySelector("button").addEventListener("click", function (e) {
     })
   })
     .then(async res => {
-      const text = await res.text(); // Düz metin olarak oku
+      const text = await res.text(); 
       try {
-        const data = JSON.parse(text); // JSON'a çevirmeyi dene
+        const data = JSON.parse(text); 
         if (data.status === "success") {
           alert("Giriş başarılı!");
         } else {
